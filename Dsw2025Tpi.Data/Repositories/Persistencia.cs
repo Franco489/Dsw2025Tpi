@@ -4,13 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Dsw2025Tpi.Data.Repositories;
 
-public class Persistencia: IRepository
+public class Persistencia : IRepository
 {
     private List<Product>? _products;
 

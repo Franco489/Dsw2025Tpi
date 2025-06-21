@@ -8,22 +8,23 @@ public class Product: EntityBase
     {
         
     }
-    public Product(string sku, string name, decimal price, string descripcion, int stockQuantity, string productId)
+    public Product(string sku, string name, decimal price, string descripcion, int stockQuantity, string internalCode)
     {
         Sku = sku;
         Name = name;
         CurrentUnitPrice = price;
         IsActive = true;
-        ProductId = productId;
+        InternalCode = internalCode;
         Descripcion = descripcion;
         StockQuantity = stockQuantity;
+        Guid.NewGuid();
 
     }
     public string? Sku { get; set; }
     public string? Name { get; set; }
     public decimal CurrentUnitPrice { get; set; }
     public bool  IsActive { get; set; }
-    public string? ProductId { get; set; }
+    public string? InternalCode { get; set; }
     public string? Descripcion { get; set; }
     public int StockQuantity { get; set; }
 

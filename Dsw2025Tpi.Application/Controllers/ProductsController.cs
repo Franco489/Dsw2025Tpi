@@ -4,85 +4,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Dsw2025Tpi.Data;
-using Dsw2025Tpi.Domain.Interfaces;
 
-
-namespace Dsw2025Tpi.Application.Controllers;
+namespace Dsw2025Tpi.Api;
 
 [ApiController]
 public class ProductsController : ControllerBase
 {
-    readonly IRepository _persistencia;
+    private readonly ProductsManagementService _service;
 
-
-
-    public ProductsController(IRepository persistencia)
+    public ProductsController(ProductsManagementService service)
     {
-        _persistencia = persistencia;
+        _service = service;
     }
-
-    [HttpPost("api/CreateProduct/{sku},{name},{precio},{codigoInterno},{descripcion},{CantidadStock}")]
-
-    public IActionResult CreateProduct(string sku, decimal precio, string codigoInterno, string descripcion)
-    {
-        var productos = _persistencia.Add();
-
-        if (productos == null || !productos.Any()) return NoContent();
-        return Ok(productos);
-    }
-
-
 
     [HttpGet()]
     public async Task<IActionResult> GetProducts()
     {
-        var products = await GetList().GetProducts();
+        var products = await _service.GetProducts();
         if (products == null || !products.Any()) return NoContent();
         return Ok(products);
     }
 
-    [HttpGet("api/products")]
-    public IActionResult GetProduct(string sku)
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetProductBySku(Guid id)
     {
-        
-        var producto = _persistencia.GetAll();
-
-        if (producto == null) return NotFound();
-
-
-        return Ok(producto);
+        var product = await _service.GetProductById(id);
+        if (product == null) return NotFound();
+        return Ok(product);
     }
 
-    [HttpGet("api/products/{sku}")]
-    public async Task<IActionResult> DeleteProduct(string sku)
+    [HttpPost()]
+    public async Task<IActionResult> AddProduct([FromBody] ProductModel.Request request)
     {
-        var producto = await _persistencia._products.FirstOrDefault(p => p.Sku == sku); //POR QUE PINGO NO ANDAAAAA
-        if (producto == null)
+        try
         {
-            return NotFound();
+            var product = await _service.AddProduct(request);
+            return Ok(product);
         }
-        await _persistencia.Sku.isActive(false);
-        return NoContent();
-    }
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateProduct(string sku)
-    {
-        var producto = await _persistencia._products.FirstOrDefault(p => p.Sku == sku);
-        if (producto == null)
+        catch (ArgumentException ae)
         {
-            return NotFound();
+            return BadRequest(ae.Message);
         }
-        return BadRequest();
+        catch (ApplicationException de)
+        {
+            return Conflict(de.Message);
+        }
+        catch (Exception)
+        {
+            return Problem("Se produjo un error al guardar el producto");
+        }
     }
-
 }
-
-
-
-
-
-
-
-
