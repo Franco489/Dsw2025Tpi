@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dsw2025Tpi.Domain.Entities
 {
-    public class Customers
+    public class Customer
     {
-        public Customers(string email, string name, string phoneNumber, Guid customerId)
+        public Customer(string email, string name, string phoneNumber, Guid customerId)
         {
             CustomerId = customerId;
             Email = email;

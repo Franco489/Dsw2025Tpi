@@ -4,6 +4,8 @@ namespace Dsw2025Tpi.Domain.Entities;
 
 public class Product : EntityBase
 {
+    private decimal currentUnitPrice;
+
     public Product(string sku, string name, decimal price, string descripcion, int stockQuantity, string productId)
     {
         Sku = sku;
@@ -16,12 +18,34 @@ public class Product : EntityBase
 
     }
 
-    public string? Sku { get; set; }
-    public string? Name { get; set; }
-    public decimal CurrentUnitPrice { get; set; }
+    public required string?  Sku { get; set; }
+    public required string? Name { get; set; }
+    public decimal CurrentUnitPrice
+    {
+        get => CurrentUnitPrice;
+        set
+        {
+            if(value<=0)
+            {
+                throw new ArgumentException("El precio no puede ser negativo");
+            }
+        }
+    }
     public bool IsActive { get; set; }
     public string ProductId { get; set; }
     public string? Descripcion { get; set; }
-    public int StockQuantity { get; set; }
+    public int StockQuantity 
+    {
+        get => StockQuantity;
+        set 
+        {
+            if(value<0)
+            {
+                throw new ArgumentException("El stock no puede ser negativo");
+            }
+        } 
+    }
+
+    public ICollection<OrderItems>? OrderItems { get; set; }
 
 }
