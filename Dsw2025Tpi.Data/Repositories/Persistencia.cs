@@ -14,6 +14,7 @@ namespace Dsw2025Tpi.Data.Repositories;
 public class Persistencia : IRepository
 {
     private List<Product>? _products;
+    private readonly DbContext _context;
 
     public Persistencia()
     {

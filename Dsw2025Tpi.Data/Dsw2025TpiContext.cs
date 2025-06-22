@@ -19,17 +19,29 @@ public class Dsw2025TpiContext: DbContext
             entity.Property(p => p.InternalCode).IsRequired().HasMaxLength(50);
             entity.Property(p => p.Name).IsRequired().HasMaxLength(100);
             entity.Property(p => p.Descripcion).HasMaxLength(500);
-            entity.Property(p => p.CurrentUnitPrice).HasColumnType("decimal(18,2)");
+            entity.Property(p => p.CurrentUnitPrice).IsRequired().HasColumnType("decimal(18,2)");
             entity.Property(p => p.StockQuantity).IsRequired().HasMaxLength(6);
             entity.Property(p => p.IsActive).HasDefaultValue(true);
         });
-        modelBuilder.Entity<Orders>(entity =>
+        modelBuilder.Entity<Order>(entity =>
         {
-            entity.Property(o => o.shippingAddress).IsRequired().HasMaxLength(300);
-            entity.Property(o => o.billingAddress).IsRequired().HasMaxLength(300);
-            entity.Property(o => o.notes).HasMaxLength(200);
-            entity.Property(o => o.date).IsRequired();
-            entity.Property(o => o.totalAmount).HasColumnType("decimal(18,2)").IsRequired();
+            entity.Property(o => o.ShipingAddress).IsRequired().HasMaxLength(300);
+            entity.Property(o => o.BillingAddress).IsRequired().HasMaxLength(300);
+            entity.Property(o => o.Notes).HasMaxLength(200);
+            entity.Property(o => o.Date).IsRequired();
+            entity.Property(o => o.TotalAmount).HasColumnType("decimal(18,2)").IsRequired();
+        });
+        modelBuilder.Entity<OrderItems>(entity =>
+        {
+            entity.Property(i => i.Quantity).IsRequired().HasMaxLength(300);
+            entity.Property(i => i.UnitPrice).HasColumnType("decimal(18,2)").IsRequired();
+            entity.Property(i => i.Subtotal).HasColumnType("decimal(18,2)");
+        });
+        modelBuilder.Entity<Customer>(entity =>
+        {
+            entity.Property(c => c.Email).IsRequired().HasMaxLength(300);
+            entity.Property(c => c.Name).IsRequired().HasMaxLength(150);
+            entity.Property(c => c.PhoneNumber).IsRequired().HasMaxLength(20);
         });
     }
 }

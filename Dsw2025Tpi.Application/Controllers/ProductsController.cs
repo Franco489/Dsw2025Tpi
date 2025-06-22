@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dsw2025Tpi.Application.Dtos;
+using Dsw2025Tpi.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dsw2025Tpi.Api;
