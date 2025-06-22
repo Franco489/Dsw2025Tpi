@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Dsw2025Tpi.Api;
 
 [ApiController]
+[Route("api/products")]
 public class ProductsController : ControllerBase
 {
     private readonly ProductsManagementService _service;
