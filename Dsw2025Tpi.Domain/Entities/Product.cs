@@ -4,7 +4,7 @@ namespace Dsw2025Tpi.Domain.Entities;
 
 public class Product : EntityBase
 {
-    public Product(string sku, string name, decimal price, string descripcion, int stockQuantity, string productId)
+    public Product(string sku, string name, decimal price, string descripcion, int stockQuantity, string internalCode, Guid productId)
     {
         Sku = sku;
         Name = name;
@@ -13,9 +13,10 @@ public class Product : EntityBase
         ProductId = productId;
         Descripcion = descripcion;
         StockQuantity = stockQuantity;
+        InternalCode = internalCode;
 
     }
-    public string ProductId { get; set; }
+    public Guid ProductId { get; set; }
     public string?  Sku { get; set; }
     public string? Name { get; set; }
     public decimal CurrentUnitPrice
@@ -43,6 +44,6 @@ public class Product : EntityBase
             }
         } 
     }
-    public ICollection<OrderItems>? OrderItems { get; set; }
+    public ICollection<OrderItem>? OrderItems { get; set; }
 
 }

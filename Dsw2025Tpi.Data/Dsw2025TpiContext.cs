@@ -48,5 +48,12 @@ public class Dsw2025TpiContext: DbContext
 
         });
 
+
+
+        modelBuilder.Entity<OrderItem>(oi =>
+        {
+            oi.ToTable("Order Items");
+        });
+
     }
 }

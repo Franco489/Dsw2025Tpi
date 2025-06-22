@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dsw2025Tpi.Domain.Entities;
 
-public class OrderItems
+public class OrderItem : EntityBase
 {
-    public OrderItems(int quantity, decimal unitPrice)
+    public OrderItem(Guid productId, int quantity, decimal unitPrice)
     {
+        ProductId = productId;
         Quantity = quantity;
         UnitPrice = unitPrice;
     }
@@ -17,14 +18,8 @@ public class OrderItems
     public int Quantity { get; set; }
     public decimal UnitPrice { get; set; }
     public ICollection<Order>? Order { get; set; }
-    public Product? ProductId { get; set; }
-    public int Subtotal 
-    {
-        get => Subtotal;
-        set
-        {
-            _ = (int)(Quantity * UnitPrice);
-        }
-    }
-
+    public Product? Product { get; set; }
+    public Guid ProductId { get; set; }
+    public int Subtotal =>(int)(Quantity * UnitPrice);
+    
 }
