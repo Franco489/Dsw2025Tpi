@@ -13,7 +13,7 @@ public class Product : EntityBase
         InternalCode = internalCode;
         Descripcion = descripcion;
         StockQuantity = stockQuantity;
-        Guid.NewGuid();
+        productId = Guid.NewGuid();
 
     }
 
@@ -24,5 +24,5 @@ public class Product : EntityBase
     public string InternalCode { get; set; }
     public string? Descripcion { get; set; }
     public int StockQuantity { get; set; }
-
+    public Guid productId { get; }
 }

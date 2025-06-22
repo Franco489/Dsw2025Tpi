@@ -14,6 +14,7 @@ namespace Dsw2025Tpi.Domain.Entities
             ShipingAddress = shipingAddress;
             BillingAddress = billingAddress;
             Notes = notes;
+            OrderId = Guid.NewGuid();
         }
 
         public DateTime Date { get; set; }
@@ -22,7 +23,7 @@ namespace Dsw2025Tpi.Domain.Entities
         public string Notes { get; set; }
         public decimal TotalAmount { get; set; }
         public ICollection<OrderItems>? OrderItems { get; set; }
-        public Guid CustomerId { get; set; }
+        public Guid OrderId { get; }
 
     }
 }

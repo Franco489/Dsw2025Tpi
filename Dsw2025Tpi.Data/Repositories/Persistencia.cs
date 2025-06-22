@@ -49,5 +49,29 @@ public class Persistencia : IRepository
         await _context.SaveChangesAsync();
         return entity;
     }
+    //esto ultimo a modificar
+    public Task<T?> GetById<T>(Guid id, params string[] include) where T : EntityBase
+    {
+        throw new NotImplementedException();
+    }
 
+    public Task<IEnumerable<T>?> GetAll<T>(params string[] include) where T : EntityBase
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<T?> First<T>(Expression<Func<T, bool>> predicate, params string[] include) where T : EntityBase
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<IEnumerable<T>?> GetFiltered<T>(Expression<Func<T, bool>> predicate, params string[] include) where T : EntityBase
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<T> Delete<T>(T entity) where T : EntityBase
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -27,10 +27,10 @@ public class ProductsController : ControllerBase
         return Ok(products);
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetProductBySku(Guid id)
+    [HttpGet("{sku}")]
+    public async Task<IActionResult> GetProductBySku(string sku)
     {
-        var product = await _service.GetProductById(id);
+        var product = await _service.GetProductById(sku);
         if (product == null) return NotFound();
         return Ok(product);
     }

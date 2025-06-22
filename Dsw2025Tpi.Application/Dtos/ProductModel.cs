@@ -12,6 +12,6 @@ namespace Dsw2025Tpi.Application.Dtos
             int StockQuantity, string InternalCode);
 
         public record Response(string? Sku, string? Name, decimal Price, string? Descripcion,
-            int StockQuantity, string InternalCode);
+            int StockQuantity, string InternalCode, Guid ID);
     }
 }
