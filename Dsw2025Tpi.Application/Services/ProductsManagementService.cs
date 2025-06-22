@@ -18,7 +18,7 @@ public class ProductsManagementService
     {
         var product = await _repository.GetById<Product>(id);
         return product != null ?
-            new ProductModel.Response(product.Sku, product.Name, product.CurrentUnitPrice, product.Descripcion, product.StockQuantity, product.ProductId) :
+            new ProductModel.Response(product.Sku, product.Name, product.CurrentUnitPrice, product.InternalCode, product.Descripcion, product.StockQuantity, product.ProductId, product.IsActive) :
             null;
     }
 
@@ -27,14 +27,14 @@ public class ProductsManagementService
         return (await _repository
             .GetFiltered<Product>(p => p.IsActive))?
             .Select(p => new ProductModel.Response(p.Sku, p.Name,
-            p.CurrentUnitPrice, p.Descripcion, p.StockQuantity, p.ProductId));
+            p.CurrentUnitPrice,p.InternalCode, p.Descripcion, p.StockQuantity, p.ProductId, p.IsActive));
     }
 
     public async Task<ProductModel.Response> AddProduct(ProductModel.Request request)
     {
-        if (string.IsNullOrWhiteSpace(request.Sku) ||
-            string.IsNullOrWhiteSpace(request.Name) ||
-            request.Price < 0)
+        if (string.IsNullOrWhiteSpace(request.Sku) || string.IsNullOrEmpty(request.InternalCode) ||
+            string.IsNullOrWhiteSpace(request.Name) || string.IsNullOrEmpty(request.Descripcion) ||
+            request.Price <= 0 || request.StockQuantity < 0 || !request.IsActive)
         {
             throw new ArgumentException("Valores para el producto no válidos");
         }
@@ -44,6 +44,6 @@ public class ProductsManagementService
         var product = new Product(request.Sku, request.Name, request.Price, request.Descripcion, request.StockQuantity, request.ProductId);
         await _repository.Add(product);
         return new ProductModel.Response(product.Sku, product.Name,
-            product.CurrentUnitPrice, product.Descripcion, product.StockQuantity, product.ProductId);
+            product.CurrentUnitPrice, product.InternalCode, product.Descripcion, product.StockQuantity, product.ProductId, product.IsActive);
     }
 }

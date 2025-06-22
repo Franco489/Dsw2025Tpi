@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Dsw2025Tpi.Application.Services;
+using Dsw2025Tpi.Application.Dtos;
 
 namespace Dsw2025Tpi.Api.Controllers;
 
 [ApiController]
+[Route("api/products")]
 public class ProductsController : ControllerBase
 {
     private readonly ProductsManagementService _service;
