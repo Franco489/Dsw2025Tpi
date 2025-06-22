@@ -54,5 +54,22 @@ public class ProductsManagementService
         return new ProductModel.Response(product.Sku, product.Name,
             product.CurrentUnitPrice, product.Descripcion, product.StockQuantity, product.InternalCode, product.productId);
     }
+
+    public async Task<ProductModel.Response> UpdateProduct(ProductModel.Request request)
+    {
+        var exist = await _repository.First<Product>(p => p.productId == request.productId);
+        if (exist == null) throw new EntityNotFoundException("No existe ese producto");
+
+        exist.Sku = request.Sku;
+        exist.Name = request.Name;
+        exist.CurrentUnitPrice = request.Price;
+        exist.Descripcion = request.Descripcion;
+        exist.StockQuantity = request.StockQuantity;
+        exist.InternalCode = request.InternalCode;
+
+        await _repository.Update(exist);
+
+        return new ProductModel.Response(exist.Sku, exist.Name,exist.CurrentUnitPrice,exist.Descripcion,exist.StockQuantity,exist.InternalCode,exist.productId);
+    }
 }
 

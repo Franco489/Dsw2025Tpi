@@ -9,9 +9,9 @@ namespace Dsw2025Tpi.Application.Dtos
     public record ProductModel
     {
         public record Request(string Sku, string Name, decimal Price, string Descripcion,
-            int StockQuantity, string InternalCode);
+            int StockQuantity, string InternalCode, Guid productId);
 
         public record Response(string? Sku, string? Name, decimal Price, string? Descripcion,
-            int StockQuantity, string InternalCode, Guid ID);
+            int StockQuantity, string InternalCode, Guid productId);
     }
 }

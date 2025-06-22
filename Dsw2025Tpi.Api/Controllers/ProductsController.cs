@@ -27,10 +27,10 @@ public class ProductsController : ControllerBase
         return Ok(products);
     }
 
-    [HttpGet("{sku}")]
-    public async Task<IActionResult> GetProductBySku(string sku)
+    [HttpGet("{productId}")]
+    public async Task<IActionResult> GetProductById(Guid id)
     {
-        var product = await _service.GetProductById(sku);
+        var product = await _service.GetProductById(id);
         if (product == null) return NotFound();
         return Ok(product);
     }
@@ -54,6 +54,24 @@ public class ProductsController : ControllerBase
         catch (Exception)
         {
             return Problem("Se produjo un error al guardar el producto");
+        }
+    }
+
+    [HttpPut("{productId}")]
+    public async Task<IActionResult> UpdateProduct([FromBody] ProductModel.Request request)
+    {
+        try
+        {
+            var product = await _service.UpdateProduct(request);
+            return Ok(product);
+        }
+        catch (ArgumentException ae)
+        {
+            return BadRequest(ae.Message);
+        }
+        catch (Exception)
+        {
+            return Problem("Se produjo un error al modificar el producto");
         }
     }
 }
