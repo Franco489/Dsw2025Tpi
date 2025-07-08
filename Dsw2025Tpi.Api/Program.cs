@@ -1,4 +1,7 @@
 
+using Dsw2025Tpi.Data;
+using Dsw2025Tpi.Domain.Interfaces;
+using Dsw2025Tpi.Application.Services;
 namespace Dsw2025Tpi.Api;
 
 public class Program
@@ -10,6 +13,8 @@ public class Program
         // Add services to the container.
 
         builder.Services.AddControllers();
+        builder.Services.AddTransient<IRepository, InMemory>();
+        builder.Services.AddTransient<ProductManagement>();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
