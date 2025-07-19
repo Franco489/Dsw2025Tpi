@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Dsw2025Tpi.Application.Dtos
 {
-    public record OrderItems
+   public record OrderItemModel
     {
-        public record Request(DateTime Date, string ShipingAddress, string BillingAddress, string Notes);
-        public record Response(DateTime Date, string ShipingAddress, string BillingAddress, string Notes, Guid ID);
+        public record Request(Guid ProductId, int Quantity, decimal UnitPrice);
+        public record Response(Guid ProductId, int Quantity, decimal UnitPrice /*decimal Subtotal */);
+
     }
 }

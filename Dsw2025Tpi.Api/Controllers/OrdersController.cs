@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Dsw2025Tpi.Application.Dtos;
-using Dsw2025Tpi.Application.Services;
+﻿using Dsw2025Tpi.Application.Dtos;
 using Dsw2025Tpi.Application.Exceptions;
+using Dsw2025Tpi.Application.Services;
+using Dsw2025Tpi.Domain.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Dsw2025Tpi.Api.Controllers;
 
@@ -15,34 +16,28 @@ public class OrdersController : ControllerBase
         _service = service;
     }
 
-    [HttpPost]
-    public async Task<ActionResult<OrderModel.Response>> CreateOrder([FromBody] OrderModel.Request reqest)
-    {
-        try
-        {
-            var order = await _service.CreateOrderAsync(reqest);
-            return CreatedAtAction(nameof(GetOrderById), new { id = order.Id }, order);
-        }
-        catch (EntityNotFoundException ex)
-        {
-            return NotFound(new { message = ex.Message });
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(new { message = ex.Message });
-        }
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult<OrderModel.Response>> GetOrderById(Guid id)
-    {
-        var order = await _service.GetOrderByIdAsync(id);
-        if (order == null)
-            return NotFound();
-
-        return Ok(order);
-    }
+    //[HttpPost()]
+    //public async Task<IActionResult> CreateOrder([FromBody] OrderModel.Request request)
+    //{
+    //    try
+    //    {
+    //        var order = await _service.CreateOrder(request);
+    //        return Ok(order);
+    //    }
+    //    catch (EntityNotFoundException ex)
+    //    {
+    //        return NotFound(new { message = ex.Message });
+    //    }
+    //    catch (DuplicatedEntityException ex)
+    //    {
+    //        return BadRequest(new { message = ex.Message });
+    //    }
+    //    catch (ApplicationException)
+    //    {
+    //        return BadRequest("No se pudo crear la oren");
+    //    }
+    //}
 }
 
 
-}
+

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Dsw2025Tpi.Application.Services;
 using Dsw2025Tpi.Application.Dtos;
+using Dsw2025Tpi.Application.Exceptions;
 
 namespace Dsw2025Tpi.Api.Controllers;
 
@@ -29,11 +30,17 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetProductBySku(Guid id)
+    public async Task<IActionResult> GetProductById(Guid id)
     {
-        var product = await _service.GetProductById(id);
-        if (product == null) return NotFound();
-        return Ok(product);
+        try
+        {
+            var product = await _service.GetProductById(id);
+            return Ok(product);
+        }
+        catch (EntityNotFoundException nf)
+        {
+            return NotFound(nf.Message);
+        }
     }
 
     [HttpPost()]
@@ -42,19 +49,57 @@ public class ProductsController : ControllerBase
         try
         {
             var product = await _service.AddProduct(request);
-            return Ok(product);
+            return Created($"api/products{product.Id}",product);
         }
-        catch (ArgumentException ae)
+        catch (DuplicatedEntityException de)
+        {
+            return BadRequest(de.Message);
+        }
+        catch (ApplicationException ae)
         {
             return BadRequest(ae.Message);
         }
-        catch (ApplicationException de)
+        
+    }
+
+
+    [HttpPut("{id}")]
+
+    public async Task<IActionResult> UpdateProduct(Guid id, [FromBody]ProductModel.Request request)
+    {
+        try
         {
-            return Conflict(de.Message);
+            var product = await _service.UpdateProduct(id, request);
+            return Ok(product);
+
         }
-        catch (Exception)
+        catch(EntityNotFoundException nf)
         {
-            return Problem("Se produjo un error al guardar el producto");
+            return NotFound(nf.Message);
+        }
+        catch(DuplicatedEntityException ae)
+        {
+            return BadRequest(ae.Message);
+        }
+        catch(ApplicationException ae)
+        {
+            return BadRequest(ae.Message);
+        }
+    }
+
+
+    [HttpPatch("{id}")]
+
+    public async Task<IActionResult> DisableProducts(Guid id)
+    {
+        try
+        {
+            var product = await _service.DisableProduct(id);
+            return NoContent();
+        }
+        catch(EntityNotFoundException nf)
+        {
+            return NotFound(nf.Message);
         }
     }
 }

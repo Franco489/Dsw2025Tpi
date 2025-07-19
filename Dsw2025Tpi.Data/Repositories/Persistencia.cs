@@ -9,11 +9,11 @@ public class Persistencia : IRepository
 {
     private List<Product>? _products;
     private List<Customer>? _customers;
-    private List<Order>? _orders;
 
     public Persistencia()
     {
         LoadProducts();
+        LoadCustomers();
     }
 
     private void LoadProducts()
@@ -25,13 +25,22 @@ public class Persistencia : IRepository
         });
     }
 
+    private void LoadCustomers()
+    {
+        var json = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Sources\\customers.json"));
+        _customers = JsonSerializer.Deserialize<List<Customer>>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+        });
+    }
+
+
     private List<T>? GetList<T>() where T : EntityBase
     {
         return typeof(T).Name switch
         {
             nameof(Product) => _products as List<T>,
             nameof(Customer) => _customers as List<T>,
-            nameof(Order) => _orders as List<T>,
             _ => throw new NotSupportedException(),
         };
     }
