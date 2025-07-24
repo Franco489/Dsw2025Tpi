@@ -1,10 +1,8 @@
-using Dsw2025Tpi.Application.Services;
+using Dsw2025Tpi.Api.DependencyInyection;
 using Dsw2025Tpi.Data;
 using Dsw2025Tpi.Data.Helpers;
-using Dsw2025Tpi.Data.Repositories;
-using Dsw2025Tpi.Domain.Entities;
-using Dsw2025Tpi.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+
 namespace Dsw2025Tpi.Api;
 
 public class Program
@@ -13,30 +11,26 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-
+        // Configura el DbContext (ajusta el proveedor y la cadena de conexión según tu entorno)  
+        // Add services to the container.  
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddHealthChecks();
-
-        builder.Services.AddDbContext<Dsw2025TpiContext>(b =>
-        {
-            b.UseSqlServer(builder.Configuration.GetConnectionString("Dsw2025Tpi"));
-
-            b.UseSeeding((c, t) =>
-            {
-                ((Dsw2025TpiContext)c).Seedwork<Product>("Sources\\products.json");
-            });
-        });
-
-        builder.Services.AddScoped<IRepository, EfRepository>();
-        builder.Services.AddTransient<ProductsManagementService>();
-        builder.Services.AddTransient<OrdersManagementService>();
+        // Se pasa la configuración requerida al método AddDomainServices  
+        builder.Services.AddDomainServices(builder.Configuration);
 
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
+        // Ejecuta migraciones y seed de datos al iniciar la app  
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<Dsw2025TpiContext>();
+            dbContext.Database.Migrate(); // Aplica migraciones pendientes  
+            dbContext.SeedDatabase();     // Carga los datos desde los JSON  
+        }
+
+        // Configure the HTTP request pipeline.  
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
@@ -44,16 +38,13 @@ public class Program
         }
 
         app.UseHttpsRedirection();
+
         app.UseAuthorization();
 
-        //using (var scope = app.Services.CreateScope())
-        //{
-        //    var context = scope.ServiceProvider.GetRequiredService<Dsw2025TpiContext>();
-        //    context.Seedwork<Product>("Sources\\products.json");
-        //    Console.WriteLine("Seeding completo");
-        //}
         app.MapControllers();
         app.MapHealthChecks("/healthcheck");
+
         app.Run();
     }
 }
+

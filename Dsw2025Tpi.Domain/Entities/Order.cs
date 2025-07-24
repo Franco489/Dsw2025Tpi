@@ -8,29 +8,34 @@ namespace Dsw2025Tpi.Domain.Entities
 {
     public class Order : EntityBase
     {
-        public Order()
+       public Order() 
         {
-            
+            OrderItems = new List<OrderItem>();
+            Date = DateTime.UtcNow;
+            Status = OrderStatus.PENDING;
         }
-        public Order(Guid customerId, DateTime date, string shippingAddress, string billingAddress, string notes, List<OrderItem> items)
+
+        public Order(
+            DateTime date,
+            string shippingAddress,
+            string billingAddress,
+            decimal totalAmount)
         {
-            CustomerId = customerId;
             Date = date;
             ShippingAddress = shippingAddress;
             BillingAddress = billingAddress;
-            Notes = notes;
-            OrderItems = items;
+            TotalAmount = totalAmount;
+            Status = OrderStatus.PENDING;
+            OrderItems = new List<OrderItem>();
         }
-        
-        public DateTime Date { get; set; }
-        public string? ShippingAddress { get; set; }
-        public string? BillingAddress { get; set; }
-        public string? Notes { get; set; }
-        public decimal TotalAmount => OrderItems?.Sum(p => p.Subtotal) ?? 0;
-        public ICollection<OrderItem>? OrderItems { get; set; }
-        public Customer? Customer { get; set; }
-        public Guid CustomerId { get; set; }
-        public OrderStatus Status { get; set; }
 
+        public OrderStatus Status { get; set; }
+        public DateTime Date { get; set; }
+        public string ShippingAddress { get; set; } = string.Empty;
+        public string BillingAddress { get; set; } = string.Empty;
+        public decimal TotalAmount { get; set; }
+        public Guid? CustomerId { get; set; }
+        public Customer? Customer { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; }
     }
 }

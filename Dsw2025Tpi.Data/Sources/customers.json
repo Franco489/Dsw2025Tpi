@@ -1,52 +1,15 @@
 [
   {
-    "name": "Juan Perez",
-    "email": "juan.perez@example.com",
-    "phoneNumber": "+54 11 4567-8910"
+
+    "id": "8ee65b9a-6746-4401-a885-09a9f7c67ed4",
+    "name": "Juan Pérez",
+    "email": "juan.perez@email.com",
+    "phoneNumber": "+54 11 1234-5678"
   },
   {
-    "name": "Maria Garcia",
-    "email": "maria.garcia@example.com",
-    "phoneNumber": "+54 11 2345-6789"
-  },
-  {
-    "name": "Carlos Lopez",
-    "email": "carlos.lopez@example.com",
-    "phoneNumber": "+54 9 351 123-4567"
-  },
-  {
-    "name": "Ana Rodriguez",
-    "email": "ana.rodriguez@example.com",
-    "phoneNumber": "+54 261 987-6543"
-  },
-  {
-    "name": "Lucas Fernandez",
-    "email": "lucas.fernandez@example.com",
-    "phoneNumber": "+54 11 1122-3344"
-  },
-  {
-    "name": "Sofia Martinez",
-    "email": "sofia.martinez@example.com",
-    "phoneNumber": "+54 381 556-7788"
-  },
-  {
-    "name": "Diego Sanchez",
-    "email": "diego.sanchez@example.com",
-    "phoneNumber": "+54 299 445-6677"
-  },
-  {
-    "name": "Carla Nunez",
-    "email": "carla.nunez@example.com",
-    "phoneNumber": "+54 264 998-1122"
-  },
-  {
-    "name": "Federico Romero",
-    "email": "federico.romero@example.com",
-    "phoneNumber": "+54 11 6677-8899"
-  },
-  {
-    "name": "Valentina Silva",
-    "email": "valentina.silva@example.com",
-    "phoneNumber": "+54 341 223-3445"
+    "id": "285c69a9-df12-4f83-a3e4-999765b7e938",
+    "name": "María García",
+    "email": "maria.garcia@email.com",
+    "phoneNumber": "+54 11 8765-4321"
   }
 ]

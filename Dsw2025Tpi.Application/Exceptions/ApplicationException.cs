@@ -1,9 +1,12 @@
-﻿namespace Dsw2025Tpi.Application.Cosas.Excepciones;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class ApplicationException : Exception
+namespace Dsw2025Tpi.Application.Exceptions
 {
-    public ApplicationException(string message): base(message)
+    public class ApplicationException(string message) : Exception(message)
     {
-        
     }
 }

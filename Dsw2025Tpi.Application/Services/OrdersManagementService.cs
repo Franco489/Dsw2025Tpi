@@ -1,71 +1,221 @@
 ﻿using Dsw2025Tpi.Application.Dtos;
-using Dsw2025Tpi.Application.Exceptions;
+using Dsw2025Tpi.Application.Validation;
+using Dsw2025Tpi.Application.Interfaces;
 using Dsw2025Tpi.Domain.Entities;
 using Dsw2025Tpi.Domain.Interfaces;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Dsw2025Tpi.Application.Exceptions;
 
-namespace Dsw2025Tpi.Application.Services;
-
-public class OrdersManagementService
+namespace Dsw2025Tpi.Application.Services
 {
-    private readonly IRepository _repository;
-
-    public OrdersManagementService(IRepository repository)
+    public class OrdersManagementService : IOrdersManagementService
     {
-        _repository = repository;
-    }
+        private readonly IRepository _repository;
 
-    public async Task<OrderModel.Response> CreateOrder(OrderModel.Request orden)
-    {
-        var customer = await _repository.GetById<Customer>(orden.CustomerId);
-
-        var items = new List<OrderItem>();
-
-        foreach (var item in orden.Items)
+        public OrdersManagementService(IRepository repository)
         {
-            var product = await _repository.GetById<Product>(item.ProductId);
-            if (product == null)
-                throw new EntityNotFoundException($"El producto '{item.ProductId}' no se encontró");
-
-            if (product.StockQuantity < item.Quantity)
-                throw new ApplicationException($"Stock insuficinete del producto: {product.Name}");
-
-
-            product.StockQuantity -= item.Quantity;
-            await _repository.Update(product);
-
-            items.Add(new OrderItem
-            {
-                ProductId = item.ProductId,
-                Quantity = item.Quantity,
-                UnitPrice = item.UnitPrice
-            });
+            _repository = repository;
         }
+
+
+        public async Task<OrderModel.Response> CreateOrderAsync(OrderModel.OrderRequest request)
+        {
+            OrderValidator.Validate(request);
+
+            var orderItems = new List<OrderItem>();
+            decimal totalAmount = 0;
+
+            // Verifica stock y existencia de productos
+            foreach (var item in request.OrderItems)
+            {
+                OrderItemValidator.Validate(item);
+            }
+
+            // Descuenta stock y arma los ítems
+            foreach (var item in request.OrderItems)
+            {
+                // Incluye el producto para la respuesta
+                var product = await _repository.GetById<Product>(item.ProductId)
+                    ?? throw new InvalidOperationException($"Producto no encontrado: {item.ProductId}");
+
+                if (product.StockQuantity < item.Quantity)
+                    throw new InvalidOperationException($"Stock insuficiente para el producto: {product.Name}");
+
+                product.StockQuantity -= item.Quantity;
+                await _repository.Update(product);
+
+                var orderItem = new OrderItem
+                {
+                    ProductId = product.Id,
+                    Quantity = item.Quantity,
+                    Price = product.CurrentUnitPrice,
+                    Description = product.Description,
+                    Product = product
+                };
+                orderItems.Add(orderItem);
+                totalAmount += product.CurrentUnitPrice * item.Quantity;
+            }
+
             var order = new Order
             {
-                CustomerId = orden.CustomerId,
-                ShippingAddress = orden.ShippingAddress,
-                BillingAddress = orden.BillingAddress,
-                Date = orden.Date,
-                Status = orden.Status,
-                OrderItems = items                
+                CustomerId = request.CustomerId,
+                ShippingAddress = request.ShippingAddress,
+                BillingAddress = request.BillingAddress,
+                Date = DateTime.UtcNow,
+                TotalAmount = totalAmount,
+                Status = OrderStatus.PENDING,
+                OrderItems = orderItems
             };
 
+            await _repository.Add(order);
 
-        await _repository.Add(order);
+            // Los productos ya están asignados en los OrderItem
+            var responseItems = orderItems.Select(oi => new OrderItemModel.Response(
+                oi.ProductId,
+                oi.Product?.Name ?? "",
+                oi.Product?.Description ?? "",
+                oi.Quantity,
+                oi.Price,
+                oi.Price * oi.Quantity
+            )).ToList();
 
-        return new OrderModel.Response(order.CustomerId, order.ShippingAddress, order.BillingAddress,
-             order.OrderItems.Select(item => new OrderItemModel.Response
-             (item.ProductId, item.Quantity, item.UnitPrice)).ToList(), order.Status, order.Date);
+            return new OrderModel.Response(
+                order.Id,
+                order.CustomerId ?? Guid.Empty,
+                order.ShippingAddress,
+                order.BillingAddress,
+                order.Date,
+                order.TotalAmount,
+                order.Status.ToString(),
+                responseItems
+            );
+        }
 
+
+
+        public async Task<IEnumerable<OrderModel.Response>?> GetAllOrders()
+        {       
+            var orders = await _repository.GetAll<Order>("OrderItems", "OrderItems.Product");
+
+            return orders?.Select(order => new OrderModel.Response(
+                order.Id,
+                order.CustomerId,
+                order.ShippingAddress,
+                order.BillingAddress,
+                order.Date,
+                order.TotalAmount,
+                order.Status.ToString(),
+                order.OrderItems.Select(oi => new OrderItemModel.Response(
+                    oi.ProductId,
+                    oi.Product?.Name ?? "",
+                    oi.Product?.Description ?? "",
+                    oi.Quantity,
+                    oi.Price,
+                    oi.Price * oi.Quantity
+                )).ToList()
+            ));
+        }
+
+
+
+        public async Task<OrderModel.Response> GetOrderById(Guid id)
+        {
+            var order = await _repository.GetById<Order>(id, "OrderItems", "OrderItems.Product");
+
+            if (order == null) throw new EntityNotFoundException("Orden no encontrada");
+
+
+            var responseItems = order.OrderItems.Select(oi => new OrderItemModel.Response(
+              oi.ProductId,
+              oi.Product?.Name ?? "",
+              oi.Product?.Description ?? "",
+              oi.Quantity,
+              oi.Price,
+              oi.Price * oi.Quantity
+              )).ToList();
+
+
+            return new OrderModel.Response(
+                order.Id,
+                order.CustomerId,
+                order.ShippingAddress,
+                order.BillingAddress,
+                order.Date,
+                order.TotalAmount,
+                order.Status.ToString(),
+                responseItems
+                );
+        }
+
+
+
+        public async Task<OrderModel.Response> UpdateOrderStatus (Guid id, string newStatus)
+        {
+            var order = await _repository.First<Order>(o => o.Id == id);
+
+            if (order == null) throw new EntityNotFoundException("No se encontró la orden");
+
+            var status = Enum.Parse<OrderStatus>(newStatus.ToUpper());
+
+            order.Status = status;
+
+            await _repository.Update(order);
+
+            var responseItems = order.OrderItems.Select(oi => new OrderItemModel.Response(
+             //oi.Id,
+             oi.ProductId,
+             oi.Product?.Name ?? "",
+             oi.Product?.Description ?? "",
+             oi.Quantity,
+             oi.Price,
+             oi.Price * oi.Quantity
+             )).ToList();
+
+
+            return new OrderModel.Response(
+                order.Id,
+                order.CustomerId,
+                order.ShippingAddress,
+                order.BillingAddress,
+                order.Date,
+                order.TotalAmount,
+                order.Status.ToString(),
+                responseItems
+                );
+
+
+        }
+
+
+
+        public async Task<OrderModel.Response> DeleteOrder(Guid id)
+        {
+            var order = await _repository.GetById<Order>(id);
+            if (order == null) throw new EntityNotFoundException("No se encontro la orden");
+
+            await _repository.Delete(order);
+
+            var responseItems = order.OrderItems.Select(oi => new OrderItemModel.Response(
+             //oi.Id,
+             oi.ProductId,
+             oi.Product?.Name ?? "",
+             oi.Product?.Description ?? "",
+             oi.Quantity,
+             oi.Price,
+             oi.Price * oi.Quantity
+             )).ToList();
+
+
+            return new OrderModel.Response(
+                order.Id,
+                order.CustomerId,
+                order.ShippingAddress,
+                order.BillingAddress,
+                order.Date,
+                order.TotalAmount,
+                order.Status.ToString(),
+                responseItems
+                );
+        }
     }
-
 }
+

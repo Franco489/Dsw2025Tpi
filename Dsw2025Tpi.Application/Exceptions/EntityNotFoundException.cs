@@ -1,8 +1,12 @@
-﻿namespace Dsw2025Tpi.Application.Exceptions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class EntityNotFoundException : ApplicationException
+namespace Dsw2025Tpi.Application.Exceptions
 {
-    public EntityNotFoundException(string message) : base(message)
+    public class EntityNotFoundException(string message) : ApplicationException(message)
     {
     }
 }

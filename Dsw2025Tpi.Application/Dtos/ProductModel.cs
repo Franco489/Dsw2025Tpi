@@ -1,11 +1,11 @@
-﻿namespace Dsw2025Tpi.Application.Dtos;
+﻿using System;
 
-public record ProductModel
+namespace Dsw2025Tpi.Application.Dtos
 {
-    public record Request(string Sku, string InternalCode, string Name, string Description, decimal Price,
-        int StockQuantity);
-
-    public record Response(string? Sku, string? InternalCode, string? Name, string? Description, decimal Price,
-            int StockQuantity, Guid Id);
+    
+    public record ProductModel
+    {
+        public record Request(string Sku, string InternalCode, string Name, string? Description, decimal CurrentUnitPrice, int StockQuantity);
+        public record Response(Guid Id, string Sku, string InternalCode, string Name, string? Description, decimal CurrentUnitPrice, int StockQuantity, bool IsActive);
+    }
 }
-

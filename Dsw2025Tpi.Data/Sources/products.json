@@ -1,122 +1,52 @@
 [
   {
-    "id": "b6e2e2c2-7e2a-4e2e-9b2a-1c2e2e2e2e2e",
-    "sku": "ABC123",
-    "internalCode": "INT-001",
-    "name": "Monitor LED 24 pulgadas",
-    "descripcion": "Monitor LED Full HD con entradas HDMI y VGA.",
-    "IsActive": true,
-    "currentUnitPrice": 199.99,
-    "stockQuantity": 50
-  },
-  {
-    "id": "a1f3c4d5-6b7a-4c8d-9e0f-1a2b3c4d5e6f",
-    "sku": "DEF456",
-    "internalCode": "INT-002",
-    "name": "Teclado mecánico retroiluminado",
-    "description": "Teclado gamer con switches rojos y luces RGB.",
-    "IsActive": true,
-    "currentUnitPrice": 89.99,
-    "stockQuantity": 75
-  },
-  {
-    "id": "c9d8e7f6-5a4b-3c2d-1e0f-9a8b7c6d5e4f",
-    "sku": "GHI789",
-    "internalCode": "INT-003",
-    "name": "Mouse inalámbrico ergonómico",
-    "description": "Mouse con conectividad Bluetooth y sensor óptico de alta precisión.",
-    "IsActive": true,
-    "currentUnitPrice": 34.50,
-    "stockQuantity": 120
-  },
-  {
-    "id": "e2f1d0c9-b8a7-6c5d-4e3f-2a1b0c9d8e7f",
-    "sku": "JKL012",
+    "id": "73da2b5e-54da-41fc-be06-1b549487fd04",
+    "sku": "7798186032825",
     "internalCode": "INT-004",
-    "name": "Auriculares Bluetooth",
-    "description": "Auriculares inalámbricos con cancelación de ruido y estuche de carga.",
-    "IsActive": true,
-    "currentUnitPrice": 149.00,
-    "stockQuantity": 65
-  },
-  {
-    "id": "f0e1d2c3-b4a5-6c7d-8e9f-0a1b2c3d4e5f",
-    "sku": "MNO345",
-    "internalCode": "INT-005",
-    "name": "Silla ergonómica de oficina",
-    "description": "Silla con soporte lumbar ajustable y reposabrazos.",
-    "IsActive": true,
-    "currentUnitPrice": 259.90,
-    "stockQuantity": 30
-  },
-  {
-    "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
-    "sku": "PQR678",
-    "internalCode": "INT-006",
-    "name": "Disco SSD 1TB",
-    "description": "Disco de estado sólido con velocidad de lectura de hasta 550MB/s.",
-    "IsActive": true,
-    "currentUnitPrice": 119.00,
-    "stockQuantity": 80
-  },
-  {
-    "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
-    "sku": "STU901",
-    "internalCode": "INT-007",
-    "name": "Impresora multifunción",
-    "description": "Impresora láser con escáner y copiadora incorporados.",
-    "IsActive": true,
-    "currentUnitPrice": 230.75,
-    "stockQuantity": 25
-  },
-  {
-    "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
-    "sku": "VWX234",
-    "internalCode": "INT-008",
-    "name": "Tablet 10 pulgadas",
-    "description": "Tablet con pantalla táctil, 64GB de almacenamiento y Android 12.",
-    "IsActive": true,
-    "currentUnitPrice": 179.99,
-    "stockQuantity": 60
-  },
-  {
-    "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
-    "sku": "YZA567",
-    "internalCode": "INT-009",
-    "name": "Cámara web HD",
-    "description": "Cámara USB con micrófono incorporado para videollamadas.",
-    "IsActive": true,
-    "currentUnitPrice": 49.99,
-    "stockQuantity": 95
-  },
-  {
-    "id": "568268c2-9eb2-4fa5-9874-60884df39122",
-    "sku": "BCD890",
-    "internalCode": "INT-010",
-    "name": "Router Wi-Fi de doble banda",
-    "description": "Router con tecnología AC1200 y cobertura de hasta 100m².",
-    "IsActive": true,
-    "currentUnitPrice": 69.95,
-    "stockQuantity": 40
-  },
-  {
-    "sku": "ADN959",
-    "internalCode": "INT-999",
-    "name": "Bicicleta",
-    "description": "Bicicleta",
-    "price": 1000.35,
-    "stockQuantity": 10,
-    "id": "8b18e526-fba4-47eb-a368-d6317bc72d05",
+    "name": "CONFITE BILLIKEN X50G",
+    "description": "Confite de chocolate con leche, sabor a avellana",
+    "currentUnitPrice": 1380,
+    "stockQuantity": 77,
     "isActive": true
   },
   {
-    "sku": "ACN231",
-    "internalCode": "INT-091",
-    "name": "Videocasetera",
-    "description": "Videocasetera",
-    "price": 100.66,
-    "stockQuantity": 20,
-    "id": "d47d384e-fbf4-4bbb-9b35-e2c071d3d6e7",
+    "id": "7ed694ce-3d54-4efa-9a9b-2461b83f85ba",
+    "sku": "7798290580052",
+    "internalCode": "INT-002",
+    "name": "JUGO TUTTI NARANJA X200ML X1U",
+    "description": "Jugo de naranja natural, sin conservantes",
+    "currentUnitPrice": 194.4,
+    "stockQuantity": 70,
+    "isActive": true
+  },
+  {
+    "id": "fce0a030-7918-41e7-9674-67a16beaa05e",
+    "sku": "7798197300265",
+    "internalCode": "INT-003",
+    "name": "TOSTADA DE ARROZ DULCE X150G",
+    "description": "Tostada de arroz dulce con sabor a vainilla",
+    "currentUnitPrice": 921.2,
+    "stockQuantity": 60,
+    "isActive": true
+  },
+  {
+    "id": "8f3f13bd-f81f-4195-8b04-854c5684e91c",
+    "sku": "7798228640261",
+    "internalCode": "INT-005",
+    "name": "BARRA DE ARROZ CROWIE X12G",
+    "description": "Barra de arroz con chocolate, sabor a malta",
+    "currentUnitPrice": 358.4,
+    "stockQuantity": 50,
+    "isActive": true
+  },
+  {
+    "id": "e7033323-3731-44ec-9d8f-abc3595a4b88",
+    "sku": "7798186031828",
+    "internalCode": "INT-001",
+    "name": "CARAMELO MASTICABLE DROPSY X700G",
+    "description": " Caramelo blando gusto a tuttifrutti",
+    "currentUnitPrice": 6292.6,
+    "stockQuantity": 50,
     "isActive": true
   }
 ]

@@ -8,10 +8,10 @@ namespace Dsw2025Tpi.Domain.Entities
 {
     public enum OrderStatus
     {
-        PENDING =1,
-        PROCESSING = 2,
-        SHIPPED = 3,
-        DELIVERED = 4,
-        CANCELLED= 5
+        PENDING = 0,
+        PROCESSING = 1,
+        SHIPPED = 2,
+        DELIVERED = 3,
+        CANCELLED = 4
     }
 }

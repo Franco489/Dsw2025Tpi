@@ -1,15 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dsw2025Tpi.Application.Dtos
 {
-   public record OrderItemModel
+    public static class OrderItemModel
     {
-        public record Request(Guid ProductId, int Quantity, decimal UnitPrice);
-        public record Response(Guid ProductId, int Quantity, decimal UnitPrice /*decimal Subtotal */);
+        public record OrderItemRequest(
+            Guid ProductId,
+            int Quantity,
+            string? Name,
+            string? Description,
+            decimal UnitPrice
+        );
 
+        public record Response(
+            Guid ProductId,
+            string ProductName,
+            string? ProductDescription,
+            int Quantity,
+            decimal Price,
+            decimal Subtotal
+        );
     }
 }
+

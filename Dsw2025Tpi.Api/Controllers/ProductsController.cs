@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Dsw2025Tpi.Application.Dtos;
+using Dsw2025Tpi.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Dsw2025Tpi.Application.Services;
-using Dsw2025Tpi.Application.Dtos;
 using Dsw2025Tpi.Application.Exceptions;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
+
 
 namespace Dsw2025Tpi.Api.Controllers;
 
@@ -14,100 +11,84 @@ namespace Dsw2025Tpi.Api.Controllers;
 [Route("api/products")]
 public class ProductsController : ControllerBase
 {
-    private readonly ProductsManagementService _service;
+    private readonly IProductsManagementService _service;
 
-    public ProductsController(ProductsManagementService service)
+    public ProductsController(IProductsManagementService service)
     {
         _service = service;
     }
 
     [HttpGet()]
-    public async Task<IActionResult> GetProducts()
+    public async Task<IActionResult> GetAllProductsAsync()
     {
-        var products = await _service.GetProducts();
+        var products = await _service.GetAllProducts();
         if (products == null || !products.Any()) return NoContent();
         return Ok(products);
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetProductById(Guid id)
+    [HttpGet("{id:guid}", Name = "GetProductById")]
+    public async Task<IActionResult> GetProductByIdAsync(Guid id)
     {
         try
         {
-            var product = await _service.GetProductById(id);
-            return Ok(product);
+            var result = await _service.GetProductById(id);
+            return Ok(result);
         }
-        catch (EntityNotFoundException nf)
+        catch (EntityNotFoundException ex)
         {
-            return NotFound(nf.Message);
+            return NotFound(ex.Message);
         }
     }
 
     [HttpPost()]
-    public async Task<IActionResult> AddProduct([FromBody] ProductModel.Request request)
+    public async Task<IActionResult> CreateProductAsync([FromBody] ProductModel.Request request)
     {
         try
         {
-            var product = await _service.AddProduct(request);
-            return Created($"api/products{product.Id}",product);
+            var result = await _service.AddProduct(request);
+            return CreatedAtAction(nameof(GetProductByIdAsync), new { id = result.Id }, result);
         }
-        catch (DuplicatedEntityException de)
+        catch (InvalidOperationException ex)
         {
-            return BadRequest(de.Message);
+            return BadRequest(ex.Message);
         }
-        catch (ApplicationException ae)
+        catch (DuplicatedEntityException ex)
         {
-            return BadRequest(ae.Message);
-        }
-        
-    }
-
-
-    [HttpPut("{id}")]
-
-    public async Task<IActionResult> UpdateProduct(Guid id, [FromBody]ProductModel.Request request)
-    {
-        try
-        {
-            var product = await _service.UpdateProduct(id, request);
-            return Ok(product);
-
-        }
-        catch(EntityNotFoundException nf)
-        {
-            return NotFound(nf.Message);
-        }
-        catch(DuplicatedEntityException ae)
-        {
-            return BadRequest(ae.Message);
-        }
-        catch(ApplicationException ae)
-        {
-            return BadRequest(ae.Message);
+            return Conflict(ex.Message);
         }
     }
 
-
-    [HttpPatch("{id}")]
-
-    public async Task<IActionResult> DisableProducts(Guid id)
+    [HttpPut]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> UpdateProdcut(Guid id, ProductModel.Request request)
     {
         try
         {
-            var product = await _service.DisableProduct(id);
+            var result = await _service.UpdateProduct(id, request);
+            return Ok(result);
+        }
+        catch (EntityNotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
+        catch (BadRequestException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpPatch()]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> DeactivateProduct(Guid id)
+    {
+        try
+        {
+            await _service.DeactivateProduct(id);
             return NoContent();
         }
-        catch(EntityNotFoundException nf)
+        catch (EntityNotFoundException ex)
         {
-            return NotFound(nf.Message);
+            return NotFound(ex.Message);
         }
     }
 }
-
-
-
-
-
-
-
-

@@ -1,13 +1,26 @@
-﻿using Dsw2025Tpi.Domain.Entities;
+﻿using System;
 
-namespace Dsw2025Tpi.Application.Dtos;
+namespace Dsw2025Tpi.Application.Dtos
+{
+    public static class OrderModel
+    {
+        public record OrderRequest(
+            Guid CustomerId,
+            string ShippingAddress,
+            string BillingAddress,
+            List<OrderItemModel.OrderItemRequest> OrderItems
+        );
 
-   public record OrderModel
-   {
-       public record Request(Guid CustomerId, string ShippingAddress, string BillingAddress,
-           List<OrderItemModel.Request> Items, OrderStatus Status, DateTime Date);
+        public record Response(
+            Guid Id,
+            Guid? CustomerId,
+            string ShippingAddress,
+            string BillingAddress,
+            DateTime Date,
+            decimal TotalAmount,
+            string Status,
+            List<OrderItemModel.Response> OrderItems
+        );
+    }
+}
 
-       public record Response(Guid CustomerId, string ShippingAddress, string BillingAddress,
-            List<OrderItemModel.Response> Items, OrderStatus Status, DateTime Date);
-
-   }

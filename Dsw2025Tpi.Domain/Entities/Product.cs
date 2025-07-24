@@ -1,56 +1,54 @@
-﻿using Dsw2025Tpi.Domain.Entities;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Dsw2025Tpi.Domain.Entities;
-
 public class Product : EntityBase
 {
-    public Product()
+    public Product(string sku, string internalCode, string name, string description, decimal currentUnitPrice, int stockQuantity)
     {
-        
-    }
-    public Product(string sku, string name, decimal price, string descripcion, int stockQuantity, string internalCode)
-    {
-        //ProductId = productId;
         Sku = sku;
-        Name = name;
-        CurrentUnitPrice = price;
-        IsActive = true;
-        Description = descripcion;
-        StockQuantity = stockQuantity;
         InternalCode = internalCode;
-
+        Name = name;
+        Description = description;
+        CurrentUnitPrice = currentUnitPrice;
+        StockQuantity = stockQuantity;
+        IsActive = true;
     }
-    //public Guid ProductId { get; set; }
-    public string?  Sku { get; set; }
-    public string? Name { get; set; }
+
+    public string Sku { get; set; }
+    public string Name { get; set; }
+
     private decimal _currentUnitPrice;
     public decimal CurrentUnitPrice
     {
         get => _currentUnitPrice;
         set
         {
-            if(value<=0)
-                throw new ApplicationException("El precio no puede ser negativo");
-            
+            if (value <= 0)
+                throw new ArgumentException("El precio debe ser mayor a 0.");
             _currentUnitPrice = value;
         }
     }
-    public bool IsActive { get; set; }
-   public string? InternalCode { get; set; }
-    public string? Description { get; set; }
+
     private int _stockQuantity;
-    public int StockQuantity 
+    public int StockQuantity
     {
         get => _stockQuantity;
-        set 
+        set
         {
-            if(value<0)
-            {
-                throw new ApplicationException("El stock no puede ser negativo");
-            }
+            if (value < 0)
+                throw new ArgumentException("La cantidad de stock no puede ser negativa.");
             _stockQuantity = value;
-        } 
+        }
     }
-    public ICollection<OrderItem>? OrderItems { get; set; }
 
+    public string InternalCode { get; set; }
+
+    public string? Description { get; set; }
+    public bool IsActive { get; set; }
+
+    public ICollection<OrderItem>? Items { get; set; }
 }
