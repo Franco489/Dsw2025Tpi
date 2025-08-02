@@ -1,58 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.application\\dtos\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.application\\dtos\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.application\\dtos\\orderitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\orderitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|solutionrelative:dsw2025tpi.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.application\\interfaces\\iordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.application\\interfaces\\iordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\interfaces\\iordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.data\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|solutionrelative:dsw2025tpi.data\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.application\\services\\productsmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\productsmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.domain\\entities\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|solutionrelative:dsw2025tpi.domain\\entities\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.application\\dtos\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.application\\interfaces\\iproductsmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\interfaces\\iproductsmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|solutionrelative:dsw2025tpi.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|solutionrelative:dsw2025tpi.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|c:\\users\\usuario\\desktop\\tpi desarrollo\\dsw2025tpi\\dsw2025tpi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6623891D-E73F-46D7-AF28-BAF345304820}|Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj|solutionrelative:dsw2025tpi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\usuario\\desktop\\tpi subir al github\\dsw2025tpi\\dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,168 +58,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderItemModel.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\OrderItemModel.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\OrderItemModel.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\OrderItemModel.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\OrderItemModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T01:42:30.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrderStatus.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Entities\\OrderStatus.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Domain\\Entities\\OrderStatus.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Entities\\OrderStatus.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Domain\\Entities\\OrderStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T22:35:37.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Domain\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Domain\\Interfaces\\IRepository.cs",
+              "DocumentIndex": 1,
+              "Title": "CustomerModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\CustomerModel.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\CustomerModel.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\CustomerModel.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\CustomerModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T18:47:44.514Z"
+              "WhenOpened": "2025-08-02T00:30:19.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EfRepository.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Data\\Repositories\\EfRepository.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Data\\Repositories\\EfRepository.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Data\\Repositories\\EfRepository.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Data\\Repositories\\EfRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAvwB0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T23:49:08.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T23:10:59.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Domain\\Entities\\Product.cs",
+              "DocumentIndex": 2,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Dtos\\RegisterModel.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\RegisterModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T23:04:22.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAIwCEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T22:48:32.712Z",
+              "WhenOpened": "2025-08-02T00:30:18.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ProductsManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\ProductsManagementService.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\ProductsManagementService.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\ProductsManagementService.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\ProductsManagementService.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAcwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T23:17:47.246Z"
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\appsettings.Development.json",
+              "RelativeToolTip": "Dsw2025Tpi.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-02T00:20:40.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IProductsManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Interfaces\\IProductsManagementService.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Interfaces\\IProductsManagementService.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Interfaces\\IProductsManagementService.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Interfaces\\IProductsManagementService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAYAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Program.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Api\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T23:16:59.053Z"
+              "WhenOpened": "2025-08-02T00:17:59.529Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IOrdersManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T23:16:54.675Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\appsettings.json",
+              "RelativeToolTip": "Dsw2025Tpi.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-02T00:16:26.881Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "AuthenticateContext.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T00:12:04.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T00:11:04.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T00:10:51.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwFYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T00:08:56.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowEoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T23:16:24.021Z"
+              "WhenOpened": "2025-08-02T00:06:02.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Domain\\Entities\\Order.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "IOrdersManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Interfaces\\IOrdersManagementService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-20T16:47:19.557Z"
+              "WhenOpened": "2025-08-02T00:07:26.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "OrdersManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\TPI Desarrollo\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPI Subir al GitHub\\Dsw2025Tpi\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
               "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAmwEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowLcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-20T15:58:57.783Z"
+              "WhenOpened": "2025-08-02T00:08:02.369Z",
+              "EditorCaption": ""
             }
           ]
         }

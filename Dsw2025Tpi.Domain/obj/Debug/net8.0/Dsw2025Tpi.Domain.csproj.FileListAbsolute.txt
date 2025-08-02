@@ -22,3 +22,28 @@ C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\n
 C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\refint\Dsw2025Tpi.Domain.dll
 C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.pdb
 C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\ref\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.deps.json
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.sourcelink.json
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\refint\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\ref\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.deps.json
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.sourcelink.json
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\refint\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Domain\obj\Debug\net8.0\ref\Dsw2025Tpi.Domain.dll

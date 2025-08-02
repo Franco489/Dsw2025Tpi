@@ -2,12 +2,14 @@
 using Dsw2025Tpi.Application.Exceptions;
 using Dsw2025Tpi.Application.Interfaces;
 using Dsw2025Tpi.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ApplicationException = Dsw2025Tpi.Application.Exceptions.ApplicationException;
 
 namespace Dsw2025Tpi.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/orders")]
     public class OrdersController : ControllerBase
     {
@@ -19,6 +21,7 @@ namespace Dsw2025Tpi.Api.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateOrder([FromBody] OrderModel.OrderRequest request)
         {
             if (request == null || request.OrderItems == null || request.OrderItems.Count == 0)
@@ -40,7 +43,7 @@ namespace Dsw2025Tpi.Api.Controllers
         }
 
         [HttpGet()]
-
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllOrders()
         {
             try
@@ -57,6 +60,7 @@ namespace Dsw2025Tpi.Api.Controllers
 
 
         [HttpGet("{id:guid}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetOrderById(Guid id)
         {
             try
@@ -73,6 +77,7 @@ namespace Dsw2025Tpi.Api.Controllers
 
 
         [HttpPut("{id:guid}/status")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateOrderStatus(Guid id, string newStatus)
         {
             try
@@ -88,19 +93,6 @@ namespace Dsw2025Tpi.Api.Controllers
         }
 
 
-        //[HttpPut("{id:guid}")]
-        //public async Task<IActionResult> DeleteOrder(Guid id)
-        //{
-        //    try
-        //    {
-        //        var order = await _service.DeleteOrder(id);
-        //        return Ok(order);
-        //    }
-        //    catch(EntityNotFoundException ex)
-        //    {
-        //        return NotFound(ex.Message);
-        //    }
-        //}
     }
 }
 

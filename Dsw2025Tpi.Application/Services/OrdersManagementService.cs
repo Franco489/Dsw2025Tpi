@@ -24,16 +24,13 @@ namespace Dsw2025Tpi.Application.Services
             var orderItems = new List<OrderItem>();
             decimal totalAmount = 0;
 
-            // Verifica stock y existencia de productos
             foreach (var item in request.OrderItems)
             {
                 OrderItemValidator.Validate(item);
             }
 
-            // Descuenta stock y arma los ítems
             foreach (var item in request.OrderItems)
             {
-                // Incluye el producto para la respuesta
                 var product = await _repository.GetById<Product>(item.ProductId)
                     ?? throw new InvalidOperationException($"Producto no encontrado: {item.ProductId}");
 
@@ -68,7 +65,6 @@ namespace Dsw2025Tpi.Application.Services
 
             await _repository.Add(order);
 
-            // Los productos ya están asignados en los OrderItem
             var responseItems = orderItems.Select(oi => new OrderItemModel.Response(
                 oi.ProductId,
                 oi.Product?.Name ?? "",
@@ -93,9 +89,9 @@ namespace Dsw2025Tpi.Application.Services
 
 
         public async Task<IEnumerable<OrderModel.Response>?> GetAllOrders()
-        {       
+        {    
             var orders = await _repository.GetAll<Order>("OrderItems", "OrderItems.Product");
-
+           
             return orders?.Select(order => new OrderModel.Response(
                 order.Id,
                 order.CustomerId,
@@ -154,14 +150,14 @@ namespace Dsw2025Tpi.Application.Services
 
             if (order == null) throw new EntityNotFoundException("No se encontró la orden");
 
-            var status = Enum.Parse<OrderStatus>(newStatus.ToUpper());
-
-            order.Status = status;
+            if (Enum.TryParse<OrderStatus>(newStatus, true, out var status) && Enum.IsDefined(typeof(OrderStatus), status))
+            {
+                order.Status = status;
+            }
 
             await _repository.Update(order);
 
             var responseItems = order.OrderItems.Select(oi => new OrderItemModel.Response(
-             //oi.Id,
              oi.ProductId,
              oi.Product?.Name ?? "",
              oi.Product?.Description ?? "",
@@ -185,37 +181,7 @@ namespace Dsw2025Tpi.Application.Services
 
         }
 
-
-
-        public async Task<OrderModel.Response> DeleteOrder(Guid id)
-        {
-            var order = await _repository.GetById<Order>(id);
-            if (order == null) throw new EntityNotFoundException("No se encontro la orden");
-
-            await _repository.Delete(order);
-
-            var responseItems = order.OrderItems.Select(oi => new OrderItemModel.Response(
-             //oi.Id,
-             oi.ProductId,
-             oi.Product?.Name ?? "",
-             oi.Product?.Description ?? "",
-             oi.Quantity,
-             oi.Price,
-             oi.Price * oi.Quantity
-             )).ToList();
-
-
-            return new OrderModel.Response(
-                order.Id,
-                order.CustomerId,
-                order.ShippingAddress,
-                order.BillingAddress,
-                order.Date,
-                order.TotalAmount,
-                order.Status.ToString(),
-                responseItems
-                );
-        }
+       
     }
 }
 

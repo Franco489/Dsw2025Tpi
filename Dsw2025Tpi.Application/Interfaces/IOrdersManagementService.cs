@@ -8,7 +8,6 @@ namespace Dsw2025Tpi.Application.Interfaces
         Task<OrderModel.Response> GetOrderById(Guid id);
         Task<IEnumerable<OrderModel.Response>?> GetAllOrders();
         Task<OrderModel.Response> UpdateOrderStatus(Guid id, string newStatus);
-        Task<OrderModel.Response> DeleteOrder(Guid id);
 
     }
 }

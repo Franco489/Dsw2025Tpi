@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "Dsw2025Tpi.Api.Controllers.AuthenticateController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Dsw2025Tpi.Application.Dtos.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Dsw2025Tpi.Api.Controllers.AuthenticateController",
+    "Method": "Register",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Dsw2025Tpi.Application.Dtos.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Dsw2025Tpi.Api.Controllers.OrdersController",
     "Method": "CreateOrder",
     "RelativePath": "api/orders",

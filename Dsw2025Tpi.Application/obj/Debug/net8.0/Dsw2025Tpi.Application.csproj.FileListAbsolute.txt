@@ -34,3 +34,39 @@ C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Application\obj\De
 C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
 C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
 C:\Users\USUARIO\Desktop\TPI Desarrollo\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.deps.json
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.pdb
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.sourcelink.json
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025T.52074EDD.Up2Date
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\Usuario\Desktop\Tpi Frozogod\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.deps.json
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.pdb
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.sourcelink.json
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025T.52074EDD.Up2Date
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\Usuario\Desktop\TPI Subir al GitHub\Dsw2025Tpi\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll

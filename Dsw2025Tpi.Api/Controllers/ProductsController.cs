@@ -3,11 +3,13 @@ using Dsw2025Tpi.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Dsw2025Tpi.Application.Exceptions;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Dsw2025Tpi.Api.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/products")]
 public class ProductsController : ControllerBase
 {
@@ -19,6 +21,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet()]
+    [AllowAnonymous]
     public async Task<IActionResult> GetAllProductsAsync()
     {
         var products = await _service.GetAllProducts();
@@ -27,6 +30,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet("{id:guid}", Name = "GetProductById")]
+    [AllowAnonymous]
     public async Task<IActionResult> GetProductByIdAsync(Guid id)
     {
         try
@@ -41,6 +45,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost()]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> CreateProductAsync([FromBody] ProductModel.Request request)
     {
         try
@@ -59,6 +64,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPut]
+    [Authorize(Roles = "Admin")]
     [Route("{id:guid}")]
     public async Task<IActionResult> UpdateProdcut(Guid id, ProductModel.Request request)
     {
@@ -78,6 +84,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPatch()]
+    [Authorize(Roles = "Admin")]
     [Route("{id:guid}")]
     public async Task<IActionResult> DeactivateProduct(Guid id)
     {
